@@ -22,19 +22,14 @@ The analysis can help the company understand it’s overall performance better. 
 -   Revenue from top 3 customer is almost double ($ 100.000), than revenue from the 4th company ($ 50.000)
 -   United Package and Federal Shipping have almost the same shipping rate (5.29% and 5.35%), but Speedy Express can provide a more favorable conditon (4.64%)
 ### Methods and steps
--   Load multiple CSV files into Power BI Desktop
--   Check coloumn quality, coloumn distribution and coloumn profile regarding the whole data set in Power Query editor
--   Check data types in Power Query editor
--   Transform data in Power Query editor
+-   Loading multiple CSV files into Power BI Desktop
+-   Checking coloumn quality, coloumn distribution, coloumn profile and data types regarding the whole data set in Power Query editor
+-   Transforming data in Power Query editor in order to prepare analysis
+-   Creating data model in Model view
 
-        o   Promoted first row as header in each tables
-        o   Change data type in each tables from text to whole number, date, currency (changed type with locale) and percentage where necessary
-        o   Add new coloumn named „year” to „order” table based on date of order
--   Create data model in Model view
-
-        o   connecting data/fact tables (orders, orderdetail) to each other and to dimension/lookup tables based on common ID’s
-        o   organizing dimension tables above fact tables in order to vizualize filter flow from up to down and highliht the snowflake scema
-        o   Setting one-to-many cardinality and one-way filters
+        o   Connecting data/fact tables (Orders, Order_details) to each other and to dimension/lookup tables (Shippers, Employees, Customers, Products, Categories) based on common ID’s
+        o   Organizing dimension tables above fact tables in order to vizualize filter flow from up to down and highliht the snowflake scema
+        o   Setting one-to-many cardinality and one-way filter directions
         o   Hiding all foreign keys from Report view prevent to use them for filtering
 
 ![Northwind Traders_model](https://github.com/bujdosox/LEGO_project_PowerBI/assets/173184545/17ad1a9f-4ed1-4d27-b7b6-ffe96f194f88)
